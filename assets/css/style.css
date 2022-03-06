@@ -106,6 +106,12 @@ button {
 }
 
 /* Adopt page */
+
+#adoptuj h1 {
+    text-align: center;
+    padding: 10px;
+}
+
 #adoptuj p {
     padding: 0 0 0.3em 0;
 }
@@ -156,6 +162,7 @@ button {
 
 .title {
     color: black;
+    margin-bottom: 5px;
 }
 
 @media screen and (max-width: 650px) {
@@ -177,7 +184,7 @@ button {
 
 .button {
     margin: 15px 0px 15px 0px;
-    padding: 8px 25px;
+    padding: 5px 20px;
     background-color: inherit;
     border: none;
     border-radius: 50px;
@@ -211,8 +218,9 @@ button {
 /*Footer*/
 
 input {
+    border: 1px solid black;
     margin-top: 10px;
-    padding: 2px 10px;
+    padding: 5px 10px;
     font-size: 20px;
     border-radius: 50px;
 }
@@ -226,5 +234,208 @@ input {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 5px;
+    margin-bottom: 15px;
+}
+
+/* Image */
+.image {
+    border-radius: 0px;
+    border: 1px solid black;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.image img {
+    border-radius: 0px;
+    display: block;
+}
+
+.image.left, .image.right {
+    max-width: 40%;
+}
+
+.image.left img, .image.right img {
+    width: 100%;
+}
+
+.image.left {
+    float: left;
+    margin: 0 1.5em 1em 0;
+    top: 0.25em;
+}
+
+.image.right {
+    float: right;
+    margin: 0 0 1em 1.5em;
+    top: 0.25em;
+}
+
+.image.fit {
+    display: block;
+    margin: 0 0 2em 0;
+    width: 100%;
+}
+
+.image.fit img {
+    width: 100%;
+}
+
+.image.main {
+    display: block;
+    margin: 0 0 3em 0;
+    width: 100%;
+}
+
+.image.main img {
+    width: 100%;
+}
+
+
+/* Spotlight */
+.spotlight {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    margin: 0 0 2em 0;
+}
+
+.spotlight .image {
+    width: 70%;
+    border-radius: 100%;
+    margin: 0 3em 0 0;
+    display: block;
+}
+
+.spotlight .image img {
+    float: right;
+    display: block;
+    border-radius: 0%;
+    width: 100%;
+}
+
+.spotlight .content {
+    width: 70%;
+}
+
+.spotlight .content> :last-child {
+    margin-bottom: 0;
+}
+
+.spotlight:nth-child(2n) {
+    -moz-flex-direction: row-reverse;
+    -webkit-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+}
+
+.spotlight:nth-child(2n) .image {
+    margin: 0 0 0 3em;
+}
+
+.spotlight:nth-child(2n) .content {
+    text-align: right;
+}
+
+@media screen and (max-width: 736px) and (orientation: landscape) {
+    .spotlight .image {
+        margin: 0 2em 0 0;
+    }
+
+    .spotlight:nth-child(2n) .image {
+        margin: 0 0 0 2em;
+    }
+}
+
+@media screen and (max-width: 736px) and (orientation: portrait) {
+    .spotlight {
+        -moz-flex-direction: column !important;
+        -webkit-flex-direction: column !important;
+        -ms-flex-direction: column !important;
+        flex-direction: column !important;
+    }
+
+    .spotlight .image {
+        width: 100%;
+        max-width: 60%;
+        margin: 0 0 2em 0 !important;
+    }
+
+    .spotlight .content {
+        width: 100%;
+        text-align: center !important;
+    }
+}
+
+/* Wrapper */
+.wrapper {
+    padding: 4.5em 0 2.5em 0;
+    background-color: #fff;
+    border-bottom: solid 2px transparent;
+}
+
+.wrapper h1 {
+    text-align: center;
+
+}
+
+.wrapper p {
+    margin: 0 0 1.5em 0;
+}
+
+.wrapper>.inner {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50em;
+}
+
+.wrapper>.inner.alt>* {
+    margin-bottom: 0;
+    margin-top: 3em;
+}
+
+.wrapper>.inner.alt>*:first-child {
+    border-top: 0;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+@media screen and (max-width: 980px) {
+    .wrapper {
+        padding: 4em 4em 2em 4em;
+    }
+
+    .wrapper>.inner {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 736px) and (orientation: landscape) {
+    .wrapper {
+        padding: 3em 3em 1em 3em;
+    }
+}
+
+@media screen and (max-width: 736px) and (orientation: portrait) {
+    .wrapper {
+        padding: 3em 1.5em 1em 1.5em;
+    }
+}
+
+@media screen and (max-width: 480px) and (orientation: landscape) {
+    .wrapper {
+        padding: 2em 1.5em 0.1em 1.5em;
+    }
+}
+
+@media screen and (max-width: 480px) and (orientation: portrait) {
+    .wrapper {
+        padding: 2em 1em 0.1em 1em;
+    }
 }
