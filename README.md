@@ -6,4 +6,4 @@ Information
 ----------
 **Preview**
 
-    https://hexon361.github.io/Schronisko/
+    https://hexon361.github.io/Animal-sanctuary/
