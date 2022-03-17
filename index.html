@@ -12,7 +12,6 @@
 <body>
 
     <header>
-
         <img src="assets/img/logo.png" alt="logo firmy">
         <nav>
             <ul class="linki">
@@ -21,28 +20,38 @@
                 <li><a href="#lokalizacja">Lokalizacja</a></li>
             </ul>
         </nav>
+        <p class="menu cta">Menu</p>
     </header>
-
     <div class="overlay">
+        <a class="close">&times;</a>
+        <div class="overlay__content">
+            <a href="#pracownicy">Pracownicy</a>
+            <a href="#adoptuj">Adoptuj pupila</a>
+            <a href="#lokalizacja">Lokalizacja</a>
+        </div>
+    </div>
+
+    <div class="middle">
         <img src="assets/css/img/piesoverlay.png" alt="overlay">
     </div>
+
 
     <div id="pracownicy">
         <section id="two" class="wrapper">
             <div class="inner alt">
                 <h1>Lista naszych najlepszych pracowników</h1>
                 <section class="spotlight">
-                    <img class="image" src="assets/img/pracownicy/anita.jpg" width="auto" height="auto" alt="opis" />
+                    <img class="image" src="assets/img/pracownicy/pracownik1.png" width="auto" height="auto" alt="opis" />
                     <div class="content">
-                        <h2>Jarek jabłko</h2>
-                        <p>dwadawd</p>
+                        <h2>Magdalena Dziubdziela-Lipiec</h2>
+                        <p>Pracowniczka schroniska od 10 lat</p>
                     </div>
                 </section>
                 <section class="spotlight">
-                    <img class="image" src="assets/img/pracownicy/anita.jpg" width="auto" height="auto" alt="opis" />
+                    <img class="image" src="assets/img/pracownicy/pracownik2.png" width="auto" height="auto" alt="opis" />
                     <div class="content">
-                        <h2>Anita jedrzejczyk</h2>
-                        <p>dwadawd</p>
+                        <h2>Jan Kunikowski</h2>
+                        <p>Lekarz weterynari w naszym schronisku</p>
                     </div>
                 </section>
             </div>
@@ -165,7 +174,7 @@
                         <div class="container">
                             <h3>Newsletter</h3>
                             <p>Zapisz sie do Newsletter i otrzymuj powiadomienia</p>
-                            <input type="email"> <button class="button" type="button">Wyślij</button>
+                            <input type="email" maxlength="25"><button class="button" type="button">Wyślij</button>
                         </div>
                     </div>
                 </div>
@@ -175,16 +184,16 @@
 
             <div class="block">
                 <div class="copyright">
-                    <p>&copy Przemek Książek 2022</p>
+                    <p>&copy Hexon361</p>
                 </div>
             </div>
 
         </div>
     </footer>
-
-
+  
 
     <!-- JS -->
+    <script src="assets/js/mobile.js"></script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.scrolly.min.js"></script>
     <script src="assets/js/browser.min.js"></script>

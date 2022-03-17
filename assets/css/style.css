@@ -49,6 +49,7 @@ hr {
 button {
     font-family: 'Ubuntu';
     font-weight: normal;
+    border-radius: 50px;
     font-size: 20px;
     text-decoration: none;
     color: black;
@@ -59,27 +60,48 @@ button {
   }
   
   ::-webkit-scrollbar-track {
-    background: #f1f1f1; 
-    border-radius: 20px;
+    background: inherit; 
   }
    
   ::-webkit-scrollbar-thumb {
-    background: #888; 
+    background: #18435a; 
+    border-radius: 50px;
   }
   
   ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
+    background: #18435a; 
   }
 
 /*main overlay photo*/
 
-.overlay img {
+.middle img {
     width: 100%;
     height: auto;
     object-fit: cover;
 }
 
+
+@media screen and (max-height: 450px) {
+    .middle {
+        padding-top: 0%!important;
+    }
+  }
+  
+  @media only screen and (max-width: 800px) {
+    .middle {
+        padding-top: 0%!important;
+    }
+  }
+
 /*Navbar*/
+.cta,
+.overlay__content a {
+    font-weight: 500px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    text-decoration: none;
+}
 
 .linki a {
     font-weight: 500px;
@@ -88,9 +110,10 @@ button {
     font-size: 1.5em;
 }
 
+
 .linki {
-    list-style: none;
-    display: flex;
+  list-style: none;
+  display: flex;
 }
 
 .linki li {
@@ -98,12 +121,97 @@ button {
 }
 
 .linki li a {
-    transition: color 0.3s ease-in 0s;
+  transition: color 0.3s ease 0s;
 }
 
 .linki li a:hover {
-    color: lightgreen;
+  color: #3A87C6;
 }
+
+.cta {
+  padding: 9px 25px;
+  background-color: #3A87C6;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease 0s;
+}
+
+.cta:hover {
+  background-color: #3A87C6;
+}
+
+/* Mobile Nav */
+
+.menu {
+  display: none;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: #24252a;
+  overflow-x: hidden;
+  transition: width 0.5s ease 0s;
+}
+
+.overlay--active {
+  width: 100%;
+}
+
+.overlay__content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay a {
+  padding: 15px;
+  font-size: 36px;
+  display: block;
+  transition: color 0.3s ease 0s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #0088a9;
+}
+.overlay .close {
+  position: absolute;
+  right: 0px;
+  font-size: 60px;
+  color: white;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .close {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .linki,
+  .cta {
+    display: none;
+  }
+  .menu {
+    display: initial;
+  }
+}
+
+  
+
 
 /* Adopt page */
 
@@ -129,6 +237,7 @@ button {
 }
 
 .card {
+    text-align: center;
     margin-left: 40px;
     line-height: 70%;
     border-radius: 20px;
@@ -136,12 +245,12 @@ button {
 }
 
 .card img {
-    width: 35%;
+    width: 40%;
     border-radius: 20px;
 }
 
 .card:hover {
-    box-shadow: 0 4px 8px 0 green;
+    box-shadow: 0 4px 8px 0 #3A87C6;
 }
 
 .about-section {
@@ -183,19 +292,18 @@ button {
 }
 
 .button {
+    font-size: 100%;
     margin: 15px 0px 15px 0px;
-    padding: 5px 20px;
+    width: 70%;
+    height: 35px;
     background-color: inherit;
-    border: none;
-    border-radius: 50px;
-    border: 1px solid #202A25;
+    border: 1px solid black;
     cursor: pointer;
     transition: all 0.3s ease 0s;
-    font-size: 20px;
 }
 
 .button:hover {
-    border: 1px solid lightgreen;
+    border: 1px solid #68A9D7;
 }
 
 /*Map*/
@@ -218,6 +326,8 @@ button {
 /*Footer*/
 
 input {
+    width: 70%;
+    height: auto;
     border: 1px solid black;
     margin-top: 10px;
     padding: 5px 10px;
